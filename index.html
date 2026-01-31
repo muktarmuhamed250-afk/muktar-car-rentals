@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Muktar Car Rentals</title>
+<head>
+<meta charset="UTF-8">
+<title>Muktar Car Rentals</title>
+
+<meta name="google-site-verification" content="ABC123XYZ">
+
+<style>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f2f2;
+}
+
+/* ================= ENTRY GATE ================= */
+#gate {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.gate-box {
+    text-align: center;
+    max-width: 320px;
+}
+
+.gate-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.gate-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.gate-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#gate input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+#gate button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #25D366;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: #000;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-box img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.header-box h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    background: #fff;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 14px;
+}
+
+/* ================= CARS ================= */
+.cars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.car {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.car img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.car h3 {
+    margin: 10px 0 5px;
+}
+
+.car .price {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.car .links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 25px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    margin: 2px;
+    font-size: 14px;
+}
+
+.btn.green { background: #25D366; }
+.btn.blue { background: #405DE6; }
+
+/* ================= FOOTER ================= */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 15px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:600px){
+    .car img { height: 140px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ENTRY SCREEN -->
+<div id="gate">
+  <div class="gate-box">
+    <div class="gate-header">
+      <img src="images/logo.png" alt="Muktar Car Rental Logo">
+      <h2>Muktar Car Rental</h2>
+    </div>
+    <p>Please enter your name to continue</p>
+    <input id="visitorName" placeholder="Your Name">
+    <button onclick="enterSite()">Enter Website</button>
+  </div>
+</div>
+
+<!-- WEBSITE -->
+<header>
+  <div class="header-box">
+    <img src="images/logo.png" alt="Muktar Car Rental Logo">
+    <h1>Muktar Car Rental</h1>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#cars">Cars</a>
+    <a href="#payments">Payments</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>                                                             
+<section id="welcome">
+<h2>welcome</h2>
+<p>Your journey begins here. Explore our premium collection of cars and book your ride effortlessly. We make renting a car simple, fast, and reliable!
+
+Drive with comfort. Drive with confidence. Drive with Muktar Car Rentals. first.</p>
+</section>
+
+<section id="cars">
+<h2>Available Cars</h2>
+<div class="cars">
+
+<!-- Car 1 -->
+<div class="car">
+<img src="https://images.hgmsites.net/lrg/2012-kia-optima-4-door-sedan-2-4l-auto-ex-hybrid-angular-front-exterior-view_100387651_l.jpg" alt="Kia ">
+<h3>Kia k5(2012)</h3>
+<p class="price">45,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent%20Kia k5(2012)">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 2 -->
+<div class="car">
+<img src="https://carfax-img.vast.com/carfax/v2/-884009724454529455/1/344x258" alt="Toyota Yaris">
+<h3>Toyota Yaris</h3>
+<p class="price">35,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent%20Toyota Yaris">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 3 -->
+<div class="car">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/VW_Polo_beats_%28VI%29_%E2%80%93_f_03032019.jpg/1280px-VW_Polo_beats_%28VI%29_%E2%80%93_f_03032019.jpg" alt="VW Polo">
+<h3>VW Polo</h3>
+<p class="price">45,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent%20VW Polo">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 4 -->
+<div class="car">
+<img src="https://mkt-vehicleimages-prd.autotradercdn.ca/photos/chrome/Expanded/White/2012KIA008a/2012KIA008a01.jpg" alt="Kia SORENTO SUV">
+<h3>Kia SORENTO SUV</h3>
+<p class="price">50,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent%20Kia SORENTO SUV">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 5 -->
+<div class="car">
+<img src="https://royaldiamondmotors.ae/wp-content/uploads/2025/08/IMG_8555-876x535.jpg" alt="BYD leopard">
+<h3>BYD leopard</h3>
+<p class="price">80,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent BYD leopard">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 6 -->
+<div class="car">
+<img src="https://imgd.aeplcdn.com/642x336/n/cw/ec/139739/land-cruiser-exterior-right-front-three-quarter-3.png?isig=0&q=80" alt="Land Cruiser">
+<h3>Land Cruiser</h3>
+<p class="price">110,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent Land Cruiser">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 7 -->
+<div class="car">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw9h3_Vl3jv5FLXv4KYLClrjx5EaymNGfo0w&s" alt="Range Rover SUV">
+<h3>Range Rover SUV</h3>
+<p class="price">85,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent Range Rover SUV">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 8 -->
+<div class="car">
+<img src="https://www.cnet.com/a/img/resize/095440176eb5bd1343f13f686637c74b22c74f48/hub/2012/05/08/8a711731-bb76-11e2-8a8e-0291187978f3/35266802_OVR.JPG?width=768" alt="Toyota Prius">
+<h3>Toyota Prius</h3>
+<p class="price">45,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent Toyota Prius">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 9 -->
+<div class="car">
+  <img src="https://img.sm360.ca/images/article/erin-park-automotive/111358//2024_toyota_grandhighlander_windchillpearl_0011679093803813.jpg" alt="Toyota Highlander">
+  <h3>Toyota Highlander</h3>
+  <p class="price">75,000 RWF / day</p>
+  <div class="links">
+    <a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent Toyota Highlander">WhatsApp</a>
+    <a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+  </div>
+</div>
+
+
+<!-- Car 10 -->
+<div class="car">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTML6qgQwtLK6y59bs5nBf3MnPARQx6PV1GZA&s" alt="Mercedes-Benz CLA-Class">
+<h3>Mercedes-Benz CLA-Class</h3>
+<p class="price">60,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent Mercedes-Benz CLA-Class">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 11 -->
+<div class="car">
+<img src="https://zimcompass.ap-south-1.linodeobjects.com/zimcompass-product_5bdd638087385781144158.jpg" alt="BMW 3 Series E90">
+<h3>BMW 3 Series E90. 1</h3>
+<p class="price">45,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent BMW 3 Series E90">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+<!-- Car 12 -->
+<div class="car">
+<img src="https://mobile.igihe.com/local/cache-vignettes/L1000xH668/125a4446-4fcd6.jpg?1713701431" alt="BMW 7 Series 750Li sedan. ">
+<h3>BMW 7 Series 750Li sedan. </h3>
+<p class="price">70,000 RWF / day</p>
+<div class="links">
+<a class="btn green" href="https://wa.me/250791678482?text=I%20want%20to%20rent BMW 7 Series 750Li sedan">WhatsApp</a>
+<a class="btn blue" href="https://instagram.com/5muktar5" target="_blank">Instagram DM</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="payments">
+<h2>Mobile Money Payments</h2>
+<p><strong>MTN:</strong> 0791 678 482</p>
+<p><strong>Airtel:</strong> 0734 601 633</p>
+<p>Send payment screenshot on WhatsApp.</p>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p>📞 +250 791678482/0734601633</p>
+<p>📧 muktarmuhamed250@gmail.com</p>
+<p>📸 Instagram: <a href="https://instagram.com/5muktar5" target="_blank">5muktar5</a></p>
+</section>  
+
+ <section id="bout">
+<h2>About us</h2>
+<p>At Muktar Car Rentals, we are passionate about making your travel experience smooth, comfortable, and stress-free. With a wide range of well-maintained vehicles and exceptional customer service, we ensure that every journey is memorable.
+
+Whether you need a car for business, leisure, or special occasions, we provide reliable rentals at competitive prices. Your satisfaction is our priority, and we strive to deliver convenience, safety, and quality with every ride.</p> 
+                                                                                                                                                        
+</section>          
+<footer> 
+<p>© 2026 Muktar Car Rental. All rights reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/250791678482">💬 WhatsApp</a>
+
+<!-- EMAILJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+(function(){ emailjs.init("NIcVXuUHQBhdPLqTF"); })();
+
+function enterSite(){
+    const name = document.getElementById("visitorName").value.trim();
+    if(!name){ alert("Please enter your name"); return; }
+
+    emailjs.send("service_laqm59n","template_fa379mt",{ name: name })
+    .then(function(response){ console.log("Email sent!", response.status, response.text); })
+    .catch(function(error){ console.log("Email failed", error); });
+
+    document.getElementById("gate").style.display = "none";
+}
+</script>
+
+</body>
+</html>
